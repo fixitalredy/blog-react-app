@@ -1,0 +1,124 @@
+.main {
+  &__sign-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 384px;
+    height: fit-content;
+    background-color: white;
+    margin-top: 80px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.103);
+  }
+  & label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  &__sign-up-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  &__sign-checkbox-label {
+    display: flex;
+    align-items: top;
+    gap: 10px;
+    line-height: 22px;
+    margin-top: 10px;
+    position: relative;
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    padding-top: 10px;
+    &::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 1px solid #262626;
+      position: absolute;
+      top: 12px;
+      left: 3px;
+      border-radius: 5px;
+    }
+    &:has(:checked)::before {
+      background-color: #1890ff;
+      border-color: #1890ff;
+    }
+    &:has(:checked)::after {
+      content: '';
+      width: 4px;
+      height: 9px;
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      rotate: 45deg;
+      position: absolute;
+      top: 14px;
+      left: 9px;
+    }
+  }
+  &__sign-title {
+    color: #262626;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  &__sign-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    &--invalid {
+      width: 100%;
+      height: 40px;
+      border: 1px solid rgb(255, 5, 5);
+      border-radius: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin-bottom: 12px;
+      padding-left: 10px;
+      &:focus {
+        outline: none;
+        border-color: red;
+      }
+      &::placeholder {
+        color: #bfbfbf;
+      }
+    }
+    &:focus {
+      outline: none;
+      border-color: #1890ff;
+    }
+    &::placeholder {
+      color: #bfbfbf;
+    }
+  }
+  &__sign-checkbox {
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+  }
+  &__sign-submit {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #1890ff;
+    font-size: 16px;
+    border: none;
+    color: white;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  &__sign-input-warning {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  &__footer {
+    color: #8c8c8c;
+    text-align: center;
+  }
+}
